@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgsParser.cs" />
     <Compile Include="CsvParser2.cs" />
     <Compile Include="PcmCsvParser.cs" />
     <Compile Include="Program.cs" />

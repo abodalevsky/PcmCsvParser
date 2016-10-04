@@ -55,6 +55,7 @@
     <Compile Include="CsvParserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PcmCsvParserUnitTest.cs" />
+    <Compile Include="ArgsParserUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\pcmcsvparse\pcmcsvparse.csproj">
