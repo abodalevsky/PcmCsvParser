@@ -34,7 +34,7 @@ namespace pcmcsvparse
                     var realValue = csvParser.GetMax(metric.Key);
                     if (realValue > metric.Value)
                     {
-                        Console.WriteLine($"METRIC: {metric.Key} exceeded threshhold {metric.Value} (real: {realValue})");
+                        Console.WriteLine($"METRIC: {metric.Key} exceeded threshold {metric.Value} (real: {realValue})");
                         Environment.Exit((int)ExitCode.ExceededThreshold);
                     }
                 }
