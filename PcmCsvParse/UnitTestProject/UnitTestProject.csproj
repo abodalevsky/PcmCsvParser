@@ -57,6 +57,7 @@
     <Compile Include="PcmCsvParserUnitTest.cs" />
     <Compile Include="PcmArgsParserUnitTest.cs" />
     <Compile Include="CCOutParserUnitTest.cs" />
+    <Compile Include="CCArgsParserUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ccmetricsparse\ccmetricsparse.csproj">
@@ -70,9 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Fixtures\test.csv" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Fixtures\ccmetrics.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
