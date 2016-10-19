@@ -55,9 +55,14 @@
     <Compile Include="CsvParserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PcmCsvParserUnitTest.cs" />
-    <Compile Include="ArgsParserUnitTest.cs" />
+    <Compile Include="PcmArgsParserUnitTest.cs" />
+    <Compile Include="CCOutParserUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ccmetricsparse\ccmetricsparse.csproj">
+      <Project>{9424f26d-99e6-4c9d-ae46-dedf9ca058fa}</Project>
+      <Name>ccmetricsparse</Name>
+    </ProjectReference>
     <ProjectReference Include="..\pcmcsvparse\pcmcsvparse.csproj">
       <Project>{b89e64a9-f6a6-4f79-8773-556479e66c93}</Project>
       <Name>pcmcsvparse</Name>
@@ -65,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Fixtures\test.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fixtures\ccmetrics.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

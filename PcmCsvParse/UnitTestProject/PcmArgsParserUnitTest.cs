@@ -5,7 +5,7 @@ using pcmcsvparse;
 namespace UnitTestProject
 {
     [TestClass]
-    public class ArgsParserUnitTest
+    public class PcmArgsParserUnitTest
     {
         [TestMethod]
         public void EmptyArgsNegative()
