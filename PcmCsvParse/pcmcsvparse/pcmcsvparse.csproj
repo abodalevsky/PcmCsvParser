@@ -45,7 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArgsParser.cs" />
+    <Compile Include="CsvParser.cs" />
     <Compile Include="CsvParser2.cs" />
+    <Compile Include="GpuCsvParser.cs" />
+    <Compile Include="ICsvParser.cs" />
     <Compile Include="PcmCsvParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

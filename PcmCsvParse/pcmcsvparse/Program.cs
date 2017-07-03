@@ -26,7 +26,11 @@ namespace pcmcsvparse
             try
             {
                 var argsParser = new ArgsParser(args);
-                var csvParser = new PcmCsvParser(argsParser.GetFileName());
+                ICsvParser csvParser;
+                if (argsParser.HeaderLine == 1)
+                    csvParser = new PcmCsvParser(argsParser.GetFileName());
+                else
+                    csvParser = new GpuCsvParser(argsParser.GetFileName());
 
                 var metrix = argsParser.Parameters;
                 foreach(var metric in metrix)

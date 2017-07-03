@@ -57,6 +57,14 @@ namespace UnitTestProject
 
         }
 
+        [TestMethod]
+        public void ParseHeaderLine()
+        {
+            string[] args = {"-h", "0", "-p", "MISS2", "0.045", "-P", "MISS3", "100.04" };
+            var pars = new ArgsParser(args);
+            Assert.AreEqual(0, pars.HeaderLine);
+        }
+
 
     }
 }

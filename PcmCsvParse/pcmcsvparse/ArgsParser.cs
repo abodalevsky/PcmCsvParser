@@ -7,6 +7,8 @@ namespace pcmcsvparse
     {
         string _fileName;
 
+        public int HeaderLine { get; private set; } = 1; // default value for backward compatibility
+
         public List<KeyValuePair<string,float>> Parameters
         {
             get;
@@ -35,10 +37,18 @@ namespace pcmcsvparse
                     idx += 2;
                     return true;
                 }
-                else
+                return false;
+            }
+            else if (token.ToLower() == "-h")
+            {
+                int i = 0;
+                if (Int32.TryParse(args[idx + 1], out i))
                 {
-                    return false;
+                    HeaderLine = i;
+                    idx += 2;
+                    return true;
                 }
+                return false;
             }
             else if (token.ToLower() == "-p")
             {
